@@ -31,7 +31,7 @@ const saveTodos = (): void => {
 	localStorage.setItem("todos", JSON.stringify(todos));
 };
 
-const handleSubmit = (e: Event, elements: Elements): void => {
+export const handleSubmit = (e: Event, elements: Elements): void => {
 	e.preventDefault();
 
 	const newTodo: Todo = {
@@ -47,14 +47,12 @@ const handleSubmit = (e: Event, elements: Elements): void => {
 	elements.inputTodo.value = "";
 };
 
-const clearTodos = (elements: Elements): void => {
+export const clearTodos = (elements: Elements): void => {
 	todos.length = 0;
 	saveTodos();
 	elements.todoList.innerHTML = "";
 };
 
-const initializeTodoList = (elements: Elements): void => {
+export const initializeTodoList = (elements: Elements): void => {
 	todos.forEach((todo) => appendTodo(todo, elements));
 };
-
-export { handleSubmit, clearTodos, initializeTodoList };
