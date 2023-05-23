@@ -54,7 +54,7 @@ body {
 	margin-left: 10px;
 	cursor: pointer;
 }
-.btn-delete-all {
+.btn-delete {
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
